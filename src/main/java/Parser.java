@@ -26,8 +26,20 @@ public class Parser {
     }
 
     private static void printFourValues(Elements values, int index){
+
+        if(index == 0 ){
+            Element valueLine = values.get(0);
+            for(Element td: valueLine.select("td")){
+
+                System.out.print(td.text() + "    ");
+            }
+        }
+
         for(int i = 0; i<4; i++){
             Element valueLine = values.get(index);
+            for(Element td: valueLine.select("td")){
+                System.out.print(td.text() + "    ");
+            }
         }
     }
 
