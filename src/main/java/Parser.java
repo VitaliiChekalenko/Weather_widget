@@ -73,7 +73,7 @@ public class Parser {
         for(Element name : names){
             String dateString = name.select("th[id=dt]").text();
             String date = getDateFromString(dateString);
-            System.out.println(date +"    Явление Температура Давоение Влажность Ветер");
+            System.out.println(date +"    Явление    |    Температура    |     Давоение    |     Влажность    |     Ветер");
             int iterationCount = printPartValues(values, index);
             index += iterationCount;
         }
